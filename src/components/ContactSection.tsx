@@ -9,7 +9,7 @@ const inputCls =
 
 declare global {
   interface Window {
-    grecaptcha: {
+    grecaptcha?: {
       render: (el: HTMLElement, opts: object) => number
       reset: (id: number) => void
       getResponse: (id: number) => string
@@ -34,7 +34,7 @@ export default function ContactSection({ profile }: { profile: Profile | null })
   const widgetIdRef = useRef<number | null>(null)
 
   const renderWidget = useCallback(() => {
-    if (!captchaRef.current || widgetIdRef.current !== null) return
+    if (!captchaRef.current || widgetIdRef.current !== null || !window.grecaptcha) return
     widgetIdRef.current = window.grecaptcha.render(captchaRef.current, {
       sitekey: SITE_KEY,
       theme: 'dark',
