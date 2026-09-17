@@ -33,7 +33,8 @@ export default async function Home() {
       {
         '@type': 'Person',
         '@id': `${BASE_URL}/#person`,
-        name: p?.name || 'Dave',
+        name: p?.name || 'Ryan Dave Doño',
+        alternateName: 'Dave',
         jobTitle: p?.title || 'Full Stack & Frontend Engineer',
         description: p?.bio || 'Full Stack & Frontend Engineer specializing in responsive, scalable web systems using Vue.js, Next.js, and Node/Express.',
         url: BASE_URL,
@@ -48,7 +49,10 @@ export default async function Home() {
           'Vue.js', 'Next.js', 'React', 'TypeScript', 'JavaScript',
           'Node.js', 'Express', 'PostgreSQL', 'Supabase', 'TailwindCSS',
         ],
-        sameAs: p?.social_links?.map(s => s.url) || [],
+        sameAs: [...new Set([
+          'https://www.linkedin.com/in/do%C3%B1o-ryan-dave-p-bba305346/',
+          ...(p?.social_links?.map(s => s.url) || []),
+        ])],
       },
       {
         '@type': 'WebSite',

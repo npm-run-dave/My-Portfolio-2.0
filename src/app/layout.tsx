@@ -8,11 +8,12 @@ export const metadata: Metadata = {
   title: 'DAVE.DEV — Full Stack & Frontend Engineer',
   description: 'Full Stack & Frontend Engineer based in PH. Specializing in responsive, scalable web systems using Vue.js, Next.js, and Node/Express with custom headless CMS architectures.',
   keywords: [
+    'Ryan Dave Doño', 'Ryan Dave', 'Dave Doño',
     'Full Stack Developer', 'Frontend Engineer', 'Vue.js', 'Next.js', 'React',
     'TypeScript', 'Node.js', 'Supabase', 'Philippines', 'Cebu', 'Web Developer',
     'Freelance Developer', 'CMS Development', 'TailwindCSS',
   ],
-  authors: [{ name: 'Dave', url: BASE_URL }],
+  authors: [{ name: 'Ryan Dave Doño', url: BASE_URL }],
   openGraph: {
     type: 'profile',
     url: BASE_URL,

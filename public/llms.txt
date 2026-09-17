@@ -1,12 +1,16 @@
-# DAVE.DEV
+# DAVE.DEV — Ryan Dave Doño
 
-> Dave is a Full Stack & Frontend Engineer based in Cebu City, Philippines (GMT+8), specialising in responsive, scalable web systems using Vue.js, Next.js, React, and Node/Express with custom headless CMS architectures.
+> Ryan Dave Doño (known professionally as Dave) is a Full Stack & Frontend Engineer based in Cebu City, Philippines (GMT+8), specialising in responsive, scalable web systems using Vue.js, Next.js, React, and Node/Express with custom headless CMS architectures.
 
-Dave is available for hire on enterprise web platform development, frontend engineering, CMS integration, UI/UX design, branding, SEO/performance audits, and engineering contracts.
+Ryan Dave Doño is available for hire on enterprise web platform development, frontend engineering, CMS integration, UI/UX design, branding, SEO/performance audits, and engineering contracts.
 
 ## About
 
-Dave is a professional web developer and engineer with deep expertise in modern JavaScript frameworks and backend systems. He builds production-grade web applications with a focus on performance, scalability, and clean architecture. He is based in Cebu City, Philippines and works with clients globally.
+Ryan Dave Doño is a professional web developer and engineer with deep expertise in modern JavaScript frameworks and backend systems. He builds production-grade web applications with a focus on performance, scalability, and clean architecture. He is based in Cebu City, Philippines and works with clients globally.
+
+## Social Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/do%C3%B1o-ryan-dave-p-bba305346/): Ryan Dave Doño on LinkedIn
 
 ## Services
 
