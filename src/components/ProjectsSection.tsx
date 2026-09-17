@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import Image from 'next/image'
 import { Project } from '@/lib/types'
 
 const FILTERS = ['All', 'Frontend', 'Fullstack', 'CMS']
@@ -81,10 +82,12 @@ function ProjectCard({ project }: { project: Project }) {
 
         {/* Background image — scales on hover */}
         {project.image_url && (
-          <img
+          <Image
             src={project.image_url}
             alt={`${project.title} – project preview screenshot`}
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
           />
         )}
 

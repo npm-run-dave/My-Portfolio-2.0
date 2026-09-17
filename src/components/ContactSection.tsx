@@ -31,6 +31,7 @@ export default function ContactSection({ profile }: { profile: Profile | null })
   const [captchaError, setCaptchaError] = useState(false)
 
   const captchaRef = useRef<HTMLDivElement>(null)
+  const sectionRef = useRef<HTMLElement>(null)
   const widgetIdRef = useRef<number | null>(null)
 
   const renderWidget = useCallback(() => {
@@ -44,15 +45,26 @@ export default function ContactSection({ profile }: { profile: Profile | null })
     })
   }, [])
 
-  // Load reCAPTCHA script once
+  // Load reCAPTCHA only when the contact section enters the viewport
   useEffect(() => {
-    if (window.grecaptcha?.render) { renderWidget(); return }
-    window.__onRecaptchaLoad = renderWidget
-    const s = document.createElement('script')
-    s.src = 'https://www.google.com/recaptcha/api.js?onload=__onRecaptchaLoad&render=explicit'
-    s.async = true; s.defer = true
-    document.head.appendChild(s)
-    return () => { delete window.__onRecaptchaLoad }
+    const section = sectionRef.current
+    if (!section) return
+
+    const loadScript = () => {
+      if (window.grecaptcha?.render) { renderWidget(); return }
+      window.__onRecaptchaLoad = renderWidget
+      const s = document.createElement('script')
+      s.src = 'https://www.google.com/recaptcha/api.js?onload=__onRecaptchaLoad&render=explicit'
+      s.async = true; s.defer = true
+      document.head.appendChild(s)
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { observer.disconnect(); loadScript() } },
+      { rootMargin: '200px' }
+    )
+    observer.observe(section)
+    return () => { observer.disconnect(); delete window.__onRecaptchaLoad }
   }, [renderWidget])
 
   // Re-render widget when form reappears after "Send another"
@@ -97,7 +109,7 @@ export default function ContactSection({ profile }: { profile: Profile | null })
   }
 
   return (
-    <section id="contact" className="py-24 px-4">
+    <section id="contact" ref={sectionRef} className="py-24 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-start">
 
