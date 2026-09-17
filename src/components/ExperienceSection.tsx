@@ -25,10 +25,10 @@ function WorkItem({ item }: { item: Experience }) {
           group-hover:shadow-[0_0_0_1px_rgba(74,222,128,0.2),0_6px_24px_rgba(74,222,128,0.06)]"
         style={{ background: 'var(--card)', border: '1px solid var(--border)' }}
       >
-        <div className="flex items-start justify-between gap-3 mb-1">
-          <h3 className="text-sm font-bold text-white leading-snug">{item.title}</h3>
+        <div className="flex items-start justify-between gap-2 mb-1">
+          <h3 className="text-sm font-bold text-white leading-snug min-w-0">{item.title}</h3>
           <span
-            className="text-[10px] font-mono font-semibold whitespace-nowrap rounded px-2 py-0.5 shrink-0"
+            className="text-[10px] font-mono font-semibold whitespace-nowrap rounded px-2 py-0.5 shrink-0 ml-1"
             style={{ background: 'rgba(74,222,128,0.15)', color: '#4ade80', border: '1px solid rgba(74,222,128,0.25)' }}
           >
             {item.period}
@@ -95,9 +95,9 @@ export default function ExperienceSection({ items }: { items: Experience[] }) {
   const education = items.filter(i => i.type === 'education').sort((a, b) => a.order_index - b.order_index)
 
   return (
-    <section id="experience" className="py-24 px-4">
+    <section id="experience" className="py-16 sm:py-24 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-14">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-14">
 
           {/* Work Experience */}
           <div>

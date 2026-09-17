@@ -109,15 +109,15 @@ export default function ContactSection({ profile }: { profile: Profile | null })
   }
 
   return (
-    <section id="contact" ref={sectionRef} className="py-24 px-4">
+    <section id="contact" ref={sectionRef} className="py-16 sm:py-24 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
 
           {/* Left: Info */}
           <div>
             <p className="section-label mb-3">// Direct Inquiries</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5 leading-tight">
-              Let&apos;s build something<br />exceptional together.
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-5 leading-tight">
+              Let&apos;s build something<span className="hidden sm:inline"><br /></span>{' '}exceptional together.
             </h2>
             <p className="text-slate-400 text-sm leading-relaxed mb-10 max-w-sm">
               Whether you are looking to construct a new enterprise web platform, optimise existing web performance, or hire for engineering contracts, my inbox is open.

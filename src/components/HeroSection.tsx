@@ -13,28 +13,28 @@ export default function HeroSection({ profile }: { profile: Profile | null }) {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center px-4 pt-20 pb-16"
+      className="min-h-screen flex items-center justify-center px-4 pt-20 pb-12 sm:pb-16"
     >
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="w-full max-w-4xl mx-auto text-center">
         {/* Location badge */}
-        <div className="inline-flex items-center gap-2 text-xs font-medium text-slate-400 border border-[var(--border)] rounded-full px-4 py-1.5 mb-8 tracking-wide">
-          <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)]" />
-          {badge}
+        <div className="inline-flex items-center gap-2 text-[10px] sm:text-xs font-medium text-slate-400 border border-[var(--border)] rounded-full px-3 sm:px-4 py-1.5 mb-6 sm:mb-8 tracking-wide max-w-full">
+          <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] shrink-0" />
+          <span className="truncate">{badge}</span>
         </div>
 
         {/* Headline */}
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-5 sm:mb-6 text-white">
           Hi, I&apos;m {name} — crafting{" "}
           <span className="gradient-text">{tagline}</span> web applications.
         </h1>
 
         {/* Bio */}
-        <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p className="text-slate-400 text-sm sm:text-base md:text-lg w-full max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed">
           {bio}
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-wrap gap-4 justify-center mb-16">
+        <div className="flex flex-wrap gap-3 sm:gap-4 justify-center mb-12 sm:mb-16">
           <a
             href="#projects"
             className="px-7 py-3 border border-slate-600 hover:border-slate-400 text-slate-200 hover:text-white rounded-lg font-medium transition-colors text-sm"

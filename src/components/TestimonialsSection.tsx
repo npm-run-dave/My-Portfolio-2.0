@@ -25,7 +25,7 @@ const TESTIMONIALS = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-24 px-4" style={{ background: 'rgba(13,22,39,0.5)' }}>
+    <section className="py-16 sm:py-24 px-4" style={{ background: 'rgba(13,22,39,0.5)' }}>
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
@@ -49,7 +49,7 @@ export default function TestimonialsSection() {
                 </div>
                 <div>
                   <p className="text-sm font-bold text-white leading-snug">{t.name}</p>
-                  <p className="text-[11px] font-mono mt-0.5" style={{ color: '#2dd4bf' }}>
+                  <p className="text-[10px] sm:text-[11px] font-mono mt-0.5 break-words" style={{ color: '#2dd4bf' }}>
                     {t.role}
                   </p>
                 </div>
@@ -61,9 +61,9 @@ export default function TestimonialsSection() {
               </p>
 
               {/* ── Footer: email + badge ── */}
-              <div className="flex items-center justify-between pt-4 border-t border-[var(--border)]">
-                <span className="text-xs text-slate-500">{t.email}</span>
-                <span className={`text-[10px] font-semibold tracking-widest border rounded px-2.5 py-1 ${t.badgeColor}`}>
+              <div className="flex items-center justify-between gap-3 pt-4 border-t border-[var(--border)]">
+                <span className="text-xs text-slate-500 truncate min-w-0">{t.email}</span>
+                <span className={`text-[10px] font-semibold tracking-widest border rounded px-2.5 py-1 shrink-0 ${t.badgeColor}`}>
                   {t.badge}
                 </span>
               </div>

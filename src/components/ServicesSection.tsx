@@ -69,10 +69,10 @@ const SERVICES = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-24 px-4" style={{ background: 'rgba(13,22,39,0.5)' }}>
+    <section id="services" className="py-16 sm:py-24 px-4" style={{ background: 'rgba(13,22,39,0.5)' }}>
       <div className="max-w-7xl mx-auto">
 
-        <div className="mb-16 text-center">
+        <div className="mb-10 sm:mb-16 text-center">
           <p className="section-label mb-3">// CMS Capabilities</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Services &amp; Technical Offerings</h2>
           <p className="text-slate-400 text-sm max-w-xl mx-auto leading-relaxed">

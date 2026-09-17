@@ -196,11 +196,11 @@ export default function ProjectsSection({ projects }: { projects: Project[] }) {
   const filtered = projects.filter(p => filterMatch(parseMeta(p.long_description), active))
 
   return (
-    <section id="projects" className="py-24 px-4">
+    <section id="projects" className="py-16 sm:py-24 px-4">
       <div className="max-w-7xl mx-auto">
 
         {/* Header + Filter row */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 sm:gap-6 mb-8 sm:mb-12">
           <div>
             <p className="section-label mb-3">// Featured Works</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Recent Case Studies</h2>
