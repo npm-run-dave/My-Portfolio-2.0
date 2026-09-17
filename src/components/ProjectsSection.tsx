@@ -83,8 +83,7 @@ function ProjectCard({ project }: { project: Project }) {
         {project.image_url && (
           <img
             src={project.image_url}
-            alt=""
-            aria-hidden="true"
+            alt={`${project.title} – project preview screenshot`}
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
           />
         )}
